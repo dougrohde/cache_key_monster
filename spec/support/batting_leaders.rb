@@ -4,7 +4,7 @@ class BattingLeaders
 
   include CacheKeyMonster::CacheKey
 
-  cache_key ->(obj){obj.leaders.map(&:id).join + obj.leaders.map(&:avg).join}
+  cache_key key: ->(obj){obj.leaders.map(&:id).join + obj.leaders.map(&:avg).join}
 
   attr_accessor :leaders
 
