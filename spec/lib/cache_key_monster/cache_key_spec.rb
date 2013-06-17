@@ -22,6 +22,29 @@ describe CacheKeyMonster::CacheKey do
       no_key.cache_key.should eq("nokeyprovided-#{no_key.hash.to_s}")
     end
   end
+  
+  context "a live event" do
+    
+    before(:each) do
+      @event = LiveEvent.new(id: 99, title: "Live Event")
+    end
+    
+    it "should return pending status key" do
+      @event.status = "pending"
+      @event.cache_key.should eq("liveevent-Live Event")
+    end
+    
+    it "should return completed status key" do
+      @event.status = "completed"
+      @event.cache_key.should eq("liveevent-99")
+    end
+    
+    it "should return default key if status does not match" do
+      @event.status = "cancelled"
+      obj_hash = @event.hash
+      @event.cache_key.should eq("liveevent-#{obj_hash}")
+    end
+  end
 
 end
 
