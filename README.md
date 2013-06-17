@@ -1,6 +1,6 @@
 # CacheKeyMonster
 
-TODO: Write a gem description
+CacheKeyMonster provides a lightweight, declarative-style syntax for adding the cache_key method which is used by Rails' "cache" method.  It allows you to cache Plain Old Ruby objects based on their constituent data.  This is useful for objects that are transient by their very nature.
 
 ## Installation
 
