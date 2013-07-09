@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["doug.rohde@tstmedia.com"]
   gem.description   = %q{A simple way to provide cache_key method to Plain Old Ruby objects}
   gem.summary       = %q{A simple way to provide cache_key method to Plain Old Ruby objects}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/dougrohde/cache_key_monster"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
