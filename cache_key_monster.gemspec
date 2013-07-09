@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = CacheKeyMonster::VERSION
   gem.authors       = ["Doug Rohde"]
   gem.email         = ["doug.rohde@tstmedia.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A simple way to provide cache_key method to Plain Old Ruby objects}
+  gem.summary       = %q{A simple way to provide cache_key method to Plain Old Ruby objects}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
